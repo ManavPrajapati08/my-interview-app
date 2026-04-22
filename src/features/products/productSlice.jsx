@@ -23,7 +23,7 @@ export const addProducts = createAsyncThunk('products/addProduct', async (produc
 
 export const updateProducts = createAsyncThunk('products/updateProduct', async (product, { rejectWithValue }) => {
     try {
-        const data = await httpService.post(`/products/update/${product.id}`, product);
+        const data = await httpService.put(`products/${product.id}`, product);
         return data
     } catch (error) {
         return rejectWithValue(error.message);
