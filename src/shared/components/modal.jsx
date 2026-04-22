@@ -4,7 +4,7 @@ import Button from './button'
 const Modal = ({ isOpen, title, onClose, children }) => {
     if (!isOpen) return null
     return (
-        <div className='fixed inset-0 z-50 flex item-center justify-center bg-black bg-opacity-50'>
+        <div className='h-auto fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'>
             <div className='bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden'>
                 <div className='flex justify-between items-center p-4 border-b'>
                     <h3 className='text-lg font-semibold'>{title}</h3>
